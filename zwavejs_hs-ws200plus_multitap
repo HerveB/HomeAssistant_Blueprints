@@ -1,11 +1,11 @@
 blueprint:
-  name: Homeseer HS-WS200+ Switch (ZWave-JS)
+  name: Homeseer HS-WS200+ Dimmer (ZWave-JS)
   description: Create automations for the Homeseer HS-WS200+ Dimmer using the ZWave-JS integration. 
   domain: automation
   input:
     homeseer_switch:
       name: Homeseer Dimmer
-      description: "List of available Homeseer Switches"
+      description: "List of available Homeseer Dimmers"
       selector:
           device:
             integration: zwave_js
@@ -99,7 +99,7 @@ variables:
   device_id: !input homeseer_switch
 trigger:
   - platform: event
-    event_type: zwave_js_event
+    event_type: zwave_js_value_notification
 condition: "{{ trigger.event.data.device_id == device_id }}"
 action:
   - variables:
