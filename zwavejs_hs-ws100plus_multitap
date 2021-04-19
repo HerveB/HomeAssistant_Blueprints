@@ -4,8 +4,8 @@ blueprint:
   domain: automation
   input:
     homeseer_switch:
-      name: Homeseer Dimmer
-      description: "List of available Homeseer Dimmers"
+      name: Homeseer Switch
+      description: "List of available Homeseer Switches"
       selector:
           device:
             integration: zwave_js
