@@ -1,5 +1,5 @@
 blueprint:
-  name: Homeseer HS-WS100+ Dimmer (ZWave-JS)
+  name: Homeseer HS-WS100+ Switch (ZWave-JS)
   description: Create automations for the Homeseer HS-WS100+ Dimmer using the ZWave-JS integration. 
   domain: automation
   input:
@@ -10,7 +10,7 @@ blueprint:
           device:
             integration: zwave_js
             manufacturer: HomeSeer Technologies
-            model: HS-WS100+
+            model: WS-100
     ## Paddle Press 1 time
     button_a:
       name: Button A - Up/On press 1x
@@ -73,7 +73,7 @@ variables:
   device_id: !input homeseer_switch
 trigger:
   - platform: event
-    event_type: zwave_js_event
+    event_type: zwave_js_value_notification
 condition: "{{ trigger.event.data.device_id == device_id }}"
 action:
   - variables:
