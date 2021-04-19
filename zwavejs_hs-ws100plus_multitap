@@ -1,6 +1,6 @@
 blueprint:
   name: Homeseer HS-WS100+ Switch (ZWave-JS)
-  description: Create automations for the Homeseer HS-WS100+ Dimmer using the ZWave-JS integration. 
+  description: Create automations for the Homeseer HS-WS100+ Switch using the ZWave-JS integration. 
   domain: automation
   input:
     homeseer_switch:
